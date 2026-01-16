@@ -6,16 +6,27 @@ use App\Models\Recipe;
 
 class RecipesController extends Controller
 {
-    // Show all recipes
+    // All recipes page
     public function index()
     {
-        $recipes = Recipe::latest()->paginate(12); // pagination
+        $recipes = Recipe::latest()->paginate(12);
+
         return view('recipes.index', compact('recipes'));
     }
 
-    // Show single recipe
+    // Single recipe page
     public function show(Recipe $recipe)
     {
+        $recipe->load([
+            'steps',
+            'ingredients',
+            'equipments',
+            'nutritions',
+            'tips',
+            'pairings',
+            'author',
+        ]);
+
         return view('recipes.show', compact('recipe'));
     }
 }
