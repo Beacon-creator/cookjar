@@ -16,6 +16,7 @@ class Recipe extends Model
         'servings',
         'is_featured',
         'author_id',
+        'slug',
     ];
 
     /* --------------------
@@ -55,5 +56,10 @@ class Recipe extends Model
     public function author()
     {
         return $this->belongsTo(Author::class);
+    }
+    
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

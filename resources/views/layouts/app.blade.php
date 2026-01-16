@@ -22,7 +22,7 @@
     @include('partials.header')
 
     {{-- MAIN CONTENT --}}
-    <main class="grow w-full max-w-7xl mx-auto px-6 py-8">
+    <main class="grow max-w-7xl mx-auto px-2 py-8">
         @yield('content')
     </main>
 
@@ -47,3 +47,7 @@
 
 </body>
 </html>
+
+
+
+

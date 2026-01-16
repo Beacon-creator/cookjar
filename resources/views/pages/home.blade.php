@@ -5,7 +5,8 @@
 @section('content')
 
 <!-- HERO SECTION -->
-<section class="relative h-[70vh] flex items-center justify-center text-center text-white rounded-3xl"
+<section class="relative h-[70vh] flex items-center justify-center 
+text-center text-white rounded-3xl"
          style="background-image: url('/images/heros.avif'); background-size: cover; background-position: center;">
     <div class="bg-black/50 rounded-3xl absolute inset-0"></div>
 
@@ -24,8 +25,8 @@
 </section>
 
 <!-- COOKING TIPS INTRO -->
-<section class="max-w-7xl mx-auto py-3">
-    <div class="bg-blue-200 rounded-3xl p-5">
+<section class="max-w-7xl mx-auto px-3 py-3">
+    <div class="bg-blue-200 rounded-3xl p-3">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
             <!-- LEFT CONTENT -->
@@ -124,7 +125,7 @@
         </div>
 
         <!-- Scroll Container -->
-        <div id="recipeScroll"
+    <div id="recipeScroll"
              class="flex space-x-6 overflow-x-auto scroll-smooth pb-4">
 
             @foreach ($featuredRecipes as $recipe)
@@ -133,7 +134,7 @@
             flex flex-col overflow-hidden">
 
     <!-- Image -->
-    <img src="{{ asset('images/' . $recipe->image) }}"
+        <img src="{{ asset('images/' . $recipe->image) }}"
          alt="{{ $recipe->title }}"
          class="h-50  w-full object-cover">
 
@@ -164,7 +165,7 @@
         </div>
 
     </div>
-</div>
+    </div>
 
             @endforeach
 
@@ -172,7 +173,7 @@
     </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-6 py-6 text-center">
+<section class="max-w-7xl mx-auto py-3 text-center">
 
     <!-- Tag -->
     <div class="mb-4">
@@ -257,7 +258,7 @@
 
 
 <!-- ABOUT US -->
-<section class="max-w-7xl mx-auto px-5 py-3">
+<section class="max-w-7xl mx-auto py-3">
     <div class="border border-gray-300 rounded-3xl p-3">
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
@@ -324,8 +325,8 @@
 
 
 <!-- SUBSCRIBE -->
-<section class="max-w-7xl mx-auto px-6 py-6">
-    <div class="bg-orange-600 rounded-3xl py-16 px-6 text-center">
+<section class="max-w-7xl mx-auto py-3">
+    <div class="bg-orange-600 rounded-3xl py-10  text-center">
 
         <!-- Label -->
         <span class="inline-block text-sm uppercase tracking-widest
