@@ -18,6 +18,8 @@ return new class extends Migration
         $table->text('more_info')->nullable();
         $table->string('image')->nullable();
         $table->boolean('is_featured')->default(false);
+        $table->string('slug')->unique();
+        $table->foreignId('author_id')->constrained()->cascadeOnDelete();
         $table->timestamps();
     });
 }
