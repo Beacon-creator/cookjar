@@ -26,6 +26,6 @@ Schema::create('nutritions', function (Blueprint $table) {
      */
     public function down(): void
     {
-        Schema::dropIfExists('nutrition');
+        Schema::dropIfExists('nutritions');
     }
 };

@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Equipment extends Model
 {
-    protected $fillable = ['recipe_id', 'name'];
+   protected $table = 'equipments';
+   protected $fillable = ['recipe_id', 'name'];
 
     public function recipe()
     {

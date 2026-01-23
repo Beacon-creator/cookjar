@@ -14,7 +14,8 @@ return new class extends Migration
 Schema::create('pairings', function (Blueprint $table) {
     $table->id();
     $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();
-    $table->string('name');
+    $table->string('title');
+    $table->string('description');
     $table->timestamps();
 });
 

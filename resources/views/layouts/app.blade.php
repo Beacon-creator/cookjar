@@ -24,6 +24,8 @@
     {{-- MAIN CONTENT --}}
     <main class="grow max-w-7xl mx-auto px-3 py-8">
         @yield('content')
+        {{-- @include('partials.featured-recipes')
+        @include('partials.subscribe') --}}
     </main>
 
         {{-- MOBILE MENU SCRIPT --}}
@@ -42,8 +44,6 @@
 
     {{-- BLOG FOOTER --}}
     @include('partials.footer')
-
-
 
 </body>
 </html>

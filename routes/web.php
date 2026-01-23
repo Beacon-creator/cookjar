@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecipesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -16,9 +17,8 @@ Route::get('/tips', function () {
     return view('pages.tips');
 })->name('tips.index');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+Route::get('/about', [AboutController::class, 'index'])
+    ->name('about');
 
 Route::get('/search', function () {
     return 'Search page';

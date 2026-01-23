@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
+    protected $table = 'authors';
     protected $fillable = ['name', 'bio', 'image'];
 
     public function recipe()

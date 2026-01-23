@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class RecipeStep extends Model
 {
+    protected $table = 'recipe_steps';
    protected $fillable = [
        'recipe_id',
-       'step_number',
        'title',
        'image',
        'instruction',

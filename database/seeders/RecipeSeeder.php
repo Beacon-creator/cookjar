@@ -22,16 +22,20 @@ class RecipeSeeder extends Seeder
     public function run(): void
     {
     $authors = Author::create([
-        'name' => 'Chef Maria Lopez',
+        'name' => 'Chef Beacon',
         'bio'  => 'Professional home chef and food blogger.',
         'image'=> 'author.jpeg',
     ]);
 
     $recipe = Recipe::create([
         'title' => 'Lemon Garlic Roasted Chicken',
-        'description' => 'Welcome to Cooks Delight, where culinary dreams 
-            come alive! Today, we embark on a journey of flavors with a dish that promises to elevate your 
-            dining experience – our Citrus Infusion Delight: Lemon Garlic Roasted Chicken.',
+        'description' => 'Picture succulent chicken infused with the bright notes of lemon and the aromatic richness of garlic. It is a symphony of flavors that will have your taste buds dancing. Join us as we delve into the art of roasting and uncover the secrets behind creating a masterpiece that is not just a meal but a celebration of culinary craftsmanship.
+            As you preheat your oven, envision the kitchen filling with the tantalizing aroma of herbs and citrus, 
+            setting the stage for a delightful meal that transcends the ordinary. 
+            The anticipation builds as the chicken roasts to golden perfection, promising a 
+            dining experience that marries simplicity with sophistication. Whether you\'re a 
+            seasoned chef or a kitchen novice, this recipe invites you to become a culinary artist, 
+            creating a masterpiece that will leave a lasting impression on your guests and loved ones.',
         'body' => 'This recipe is a perfect blend of citrusy and garlicky flavors, 
             creating a dish that is both aromatic and satisfying.',
         'more_info' => '1 Hour • Hard Prep • 4 Serves',
@@ -47,8 +51,8 @@ class RecipeSeeder extends Seeder
         ['recipe_id' => $recipe->id, 'name' => 'Garlic cloves', 'quantity' => '6'],
         ['recipe_id' => $recipe->id, 'name' => 'Olive oil', 'quantity' => '3 tbsp'],
         ['recipe_id' => $recipe->id, 'name' => 'Fresh rosemary', 'quantity' => '2 sprigs'],
-        ['recipe_id' => $recipe->id, 'name' => 'Salt', 'quantity' => 'to taste'],
-        ['recipe_id' => $recipe->id, 'name' => 'Black pepper', 'quantity' => 'to taste'],
+        ['recipe_id' => $recipe->id, 'name' => 'Salt', 'quantity' => 'Some'],
+        ['recipe_id' => $recipe->id, 'name' => 'Black pepper', 'quantity' => 'Some'],
     ]);
 
     Equipment::insert([
@@ -62,15 +66,13 @@ class RecipeSeeder extends Seeder
     RecipeStep::insert([
         [
             'recipe_id' => $recipe->id,
-            'step_number' => 1,
-            'title' => 'Prepare the chicken',
+            'title' => 'PREHEAT AND PREPARE',
             'instruction' => 'Pat the chicken dry and season generously.',
             'image' => 'step1.png',
         ],
         [
             'recipe_id' => $recipe->id,
-            'step_number' => 2,
-            'title' => 'Roast to perfection',
+            'title' => 'ROAST TO PERFECTION',
             'instruction' => 'Roast at 190°C until golden brown.',
             'image' => 'step2.png',
         ],
@@ -125,15 +127,10 @@ class RecipeSeeder extends Seeder
     [
         'recipe_id' => $recipe->id,
         'title' => 'Herb-infused Quinoa',
-        'description' => 'A wholesome base that absorbs the roasted chicken juices perfectly.',
+        'description' => 'A wholesome base that absorbs the roasted chicken juices perfectly.',     
     ],
-    [
-        'recipe_id' => $recipe->id,
-        'title' => 'Wine Pairing',
-        'description' => 'Pair with a crisp white wine or light rosé for a balanced meal.',
-    ],
-]);
 
+    ]);
     }
 }
 

@@ -14,7 +14,9 @@ return new class extends Migration
 Schema::create('recipe_tips', function (Blueprint $table) {
     $table->id();
     $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();
-    $table->string('tip');
+    $table->string('title');
+    $table->string('type', ['do', 'dont']);
+    $table->string('content');
     $table->timestamps();
 });
 

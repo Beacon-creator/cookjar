@@ -1,5 +1,6 @@
 @if ($recipe->author)
-<div class="flex items-center gap-6 border rounded-3xl p-6">
+<hr/>
+<div class="flex items-center gap-6">
     <img src="/images/{{ $recipe->author->image }}"
          class="w-20 h-20 rounded-full object-cover">
 
