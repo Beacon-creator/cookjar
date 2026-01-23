@@ -25,7 +25,7 @@ text-center text-white rounded-3xl"
 </section>
 
 <!-- COOKING TIPS INTRO -->
-<section class="max-w-7xl mx-auto px-3 py-3">
+<section class=" mx-auto py-6">
     <div class="bg-blue-200 rounded-3xl p-3">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -56,46 +56,46 @@ text-center text-white rounded-3xl"
             </div>
 
             <!-- RIGHT CONTENT -->
-<div class="p-2">
-    <ul class="divide-y divide-gray-400">
+            <div class="p-2">
+            <ul class="divide-y divide-gray-400">
 
-        <li class="flex items-center justify-between py-4">
-            <span class="text-xl">🍳</span>
-            <span class="font-medium text-gray-800 tracking-wide">
+                 <li class="flex items-center justify-between py-4">
+                <span class="text-xl">🍳</span>
+                <span class="font-medium text-gray-800 tracking-wide">
                 BREAKFAST
-            </span>
-        </li>
+                </span>
+                </li>
 
-        <li class="flex items-center justify-between py-4">
-            <span class="text-xl">🥗</span>
-            <span class="font-medium text-gray-800 tracking-wide">
-                LUNCH
-            </span>
-        </li>
+                <li class="flex items-center justify-between py-4">
+                    <span class="text-xl">🥗</span>
+                    <span class="font-medium text-gray-800 tracking-wide">
+                        LUNCH
+                    </span>
+                </li>
 
-        <li class="flex items-center justify-between py-4">
-            <span class="text-xl">🍽️</span>
-            <span class="font-medium text-gray-800 tracking-wide">
-                DINNER
-            </span>
-        </li>
+                <li class="flex items-center justify-between py-4">
+                    <span class="text-xl">🍽️</span>
+                    <span class="font-medium text-gray-800 tracking-wide">
+                        DINNER
+                    </span>
+                </li>
 
-        <li class="flex items-center justify-between py-4">
-            <span class="text-xl">🍰</span>
-            <span class="font-medium text-gray-800 tracking-wide">
-                DESSERT
-            </span>
-        </li>
+                <li class="flex items-center justify-between py-4">
+                    <span class="text-xl">🍰</span>
+                    <span class="font-medium text-gray-800 tracking-wide">
+                        DESSERT
+                    </span>
+                </li>
 
-        <li class="flex items-center justify-between py-4">
-            <span class="text-xl">⚡</span>
-            <span class="font-medium text-gray-800 tracking-wide">
-                QUICK BITES
-            </span>
-        </li>
+                <li class="flex items-center justify-between py-4">
+                    <span class="text-xl">⚡</span>
+                    <span class="font-medium text-gray-800 tracking-wide">
+                        QUICK BITES
+                    </span>
+                </li>
 
-    </ul>
-</div>
+            </ul>
+        </div>
 
 
         </div>
@@ -104,25 +104,24 @@ text-center text-white rounded-3xl"
 
 
 <!-- FEATURED RECIPES -->
-<section class="bg-gray-50 border border-gray-300 py-6 rounded-3xl mt-6">
-    <div class="max-w-7xl mx-auto px-6">
+<section class="bg-gray-50 border border-gray-300 px-6 py-6 rounded-3xl">
 
         <!-- Header -->
-        <div class="flex items-center justify-between mb-6">
-            <h2 class="text-3xl font-bold">FEATURED RECIPES</h2>
+    <div class="flex items-center justify-between mb-6">
+        <h2 class="text-3xl font-bold">FEATURED RECIPES</h2>
 
             <!-- Scroll Buttons -->
-            <div class="flex space-x-3">
-                <button onclick="scrollLeft()"
+        <div class="flex space-x-3">
+            <button onclick="scrollLeft()"
                         class="border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-200">
                     <
-                </button>
-                <button onclick="scrollRight()"
+            </button>
+            <button onclick="scrollRight()"
                         class="border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-200">
                     >
-                </button>
-            </div>
+            </button>
         </div>
+    </div>
 
         <!-- Scroll Container -->
     <div id="recipeScroll"
@@ -170,10 +169,10 @@ text-center text-white rounded-3xl"
             @endforeach
 
         </div>
-    </div>
 </section>
 
-<section class="max-w-7xl mx-auto py-3 text-center">
+<!-- RECIPES SECTION -->
+<section class=" mx-auto py-6 text-center">
 
     <!-- Tag -->
     <div class="mb-4">
@@ -218,47 +217,49 @@ text-center text-white rounded-3xl"
     <!-- RECIPES GRID -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-        @for ($i = 1; $i <= 6; $i++)
-            <div class="bg-white border rounded-xl overflow-hidden
-                        hover:shadow-lg transition">
+    @forelse ($recipes as $recipe)
+        <div class="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
 
-                <img src="/images/recipe{{ $i }}.png"
-                     alt="Recipe"
-                     class="h-44 w-full object-cover">
+            <img src="{{ asset('images/' . $recipe->image) }}"
+                 alt="{{ $recipe->title }}"
+                 class="h-44 w-full object-cover">
 
-                <div class="p-4 text-left">
-                   <div class="flex-1">
-            <h3 class="font-extrabold text-lg mb-1 line-clamp-2">
-                {{ $recipe->title }}
-            </h3>
+            <div class="p-4 text-left">
+                <h3 class="font-extrabold text-lg mb-1 line-clamp-2">
+                    {{ $recipe->title }}
+                </h3>
 
-            <p class="text-gray-600 text-xs line-clamp-3">
-                {{ $recipe->description }}
-            </p>
-        </div>
+                <p class="text-gray-600 text-xs line-clamp-3">
+                    {{ $recipe->description }}
+                </p>
 
-                    <div class="flex items-center justify-between pt-2 text-xs">
-            <span class="text-gray-500">
-                {{ $recipe->more_info }}
-            </span>
+                <div class="flex items-center justify-between pt-2 text-xs">
+                    <span class="text-gray-500">
+                        {{ $recipe->more_info }}
+                    </span>
 
-            <a href="{{ route('recipes.show', $recipe) }}"
-               class="text-gray-500 bg-white border border-gray-500 rounded-full font-semibold hover:bg-gray-100 px-3 py-1 text-xs">
-                VIEW RECIPE
-            </a>
-        </div>
+                    <a href="{{ route('recipes.show', $recipe) }}"
+                       class="text-gray-500 bg-white border border-gray-500 rounded-full font-semibold hover:bg-gray-100 px-3 py-1">
+                        VIEW RECIPE
+                    </a>
                 </div>
-
             </div>
-        @endfor
+
+        </div>
+    @empty
+        <p class="col-span-3 text-center text-gray-500">
+            No recipes available.
+        </p>
+    @endforelse
 
     </div>
+
 
 </section>
 
 
 <!-- ABOUT US -->
-<section class="max-w-7xl mx-auto py-3">
+<section class=" mx-auto py-3">
     <div class="border border-gray-300 rounded-3xl p-3">
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">

@@ -1,4 +1,4 @@
-<header class="w-full px-3 mt-3">
+<header class="w-full mt-3">
     <div class="max-w-7xl mx-auto px-3">
         
         <div class="flex items-center justify-between

@@ -8,15 +8,16 @@ class Recipe extends Model
 {
     protected $fillable = [
         'title',
+        'slug',
         'description',
+        'body',
         'more_info',
         'image',
         'prep_time',
         'difficulty',
-        'servings',
+        'serving',
         'is_featured',
         'author_id',
-        'slug',
     ];
 
     /* --------------------
@@ -57,7 +58,10 @@ class Recipe extends Model
     {
         return $this->belongsTo(Author::class);
     }
-    
+
+    /* --------------------
+     | Route Model Binding
+     |--------------------*/
     public function getRouteKeyName()
     {
         return 'slug';

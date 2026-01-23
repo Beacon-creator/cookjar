@@ -3,8 +3,8 @@
 @section('title', 'All Recipes | CookJar')
 
 @section('content')
-<section class="max-w-7xl mx-auto px-6 py-16">
-    <h1 class="text-3xl font-bold mb-10 text-center">All Recipes</h1>
+<section class=" px-3 py-3">
+    <h1 class="text-3xl font-bold mb-5 text-center">All Recipes</h1>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         @forelse($recipes as $recipe)

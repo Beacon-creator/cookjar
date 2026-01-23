@@ -13,7 +13,7 @@ class HomeController extends Controller
             ->latest()
             ->take(6)
             ->get();
-
-        return view('pages.home', compact('featuredRecipes'));
+        $recipes = Recipe::latest()->take(6)->get();
+        return view('pages.home', compact('featuredRecipes', 'recipes'));
     }
 }

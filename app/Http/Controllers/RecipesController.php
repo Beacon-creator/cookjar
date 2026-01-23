@@ -11,7 +11,7 @@ class RecipesController extends Controller
     {
         $recipes = Recipe::latest()->paginate(12);
 
-        return view('recipes.index', compact('recipes'));
+        return view('pages.recipes.index', compact('recipes'));
     }
 
     // Single recipe page
@@ -25,8 +25,9 @@ class RecipesController extends Controller
             'tips',
             'pairings',
             'author',
+            
         ]);
 
-        return view('recipes.show', compact('recipe'));
+        return view('pages.recipes.show', compact('recipe'));
     }
 }

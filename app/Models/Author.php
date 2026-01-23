@@ -8,7 +8,7 @@ class Author extends Model
 {
     protected $fillable = ['name', 'bio', 'image'];
 
-    public function recipes()
+    public function recipe()
     {
         return $this->hasMany(Recipe::class);
     }

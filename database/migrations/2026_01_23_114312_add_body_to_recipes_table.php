@@ -11,13 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create('equipments', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();
-    $table->string('name');
-    $table->timestamps();
-});
-
+        Schema::table('recipes', function (Blueprint $table) {
+           $table->longText('body')->nullable();
+        });
     }
 
     /**
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('equipments');
+        Schema::table('recipes', function (Blueprint $table) {
+            //
+        });
     }
 };
