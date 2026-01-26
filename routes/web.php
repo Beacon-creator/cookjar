@@ -16,7 +16,7 @@ Route::get('/recipes/{recipe}', [RecipesController::class, 'show'])
     ->name('recipes.show');
 
 Route::get('/tips', [CookingTipController::class, 'index'])
-    ->name('tips.index');
+    ->name('tips');
 
 Route::get('/about', [AboutController::class, 'index'])
     ->name('about');

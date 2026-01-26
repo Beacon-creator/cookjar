@@ -33,7 +33,7 @@ text-center text-white rounded-3xl"
             <div class="text-left mt-5 ml-3">
 
                 <div class="py-5">
-                    <a href="{{ route('tips.index') }}"
+                    <a href="{{ route('tips') }}"
                        class="text-sm bg-orange-700 px-2 py-1
                        rounded-full text-white hover:text-orange-500 transition">
                         EXPLORE
@@ -48,7 +48,7 @@ text-center text-white rounded-3xl"
                 </p>
                     </div> 
                 
-                <a href="{{ route('tips.index') }}"
+                <a href="{{ route('tips') }}"
                        class="text-sm border-gray-500 border px-3 py-1
                        rounded-full text-gray-800 hover:text-orange-500 transition">
                         SEE MORE

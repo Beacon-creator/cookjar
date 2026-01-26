@@ -29,7 +29,7 @@
                 RECIPES
             </a>
 
-            <a href="{{ route('tips.index') }}"
+            <a href="{{ route('tips') }}"
                class="nav-link {{ request()->routeIs('tips.*') ? 'active' : '' }}">
                 COOKING TIPS
             </a>
@@ -66,7 +66,7 @@
        <nav class="flex flex-col space-y-3 text-gray-700">
     <a href="{{ route('home') }}" class="hover:text-orange-500">HOME</a>
     <a href="{{ route('recipes.index') }}" class="hover:text-orange-500">RECIPES</a>
-    <a href="{{ route('tips.index') }}" class="hover:text-orange-500">COOKING TIPS</a>
+    <a href="{{ route('tips') }}" class="hover:text-orange-500">COOKING TIPS</a>
     <a href="{{ route('about') }}" class="hover:text-orange-500">ABOUT US</a>
     <a href="{{ route('subscribe') }}" class="font-semibold hover:text-orange-500">SUBSCRIBE</a>
 </nav>
