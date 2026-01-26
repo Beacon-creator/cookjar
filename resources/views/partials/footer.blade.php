@@ -13,19 +13,19 @@
 
             <!-- Navigation -->
             <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium">
-                <a href="/" class="text-gray-300 hover:text-white transition">HOME</a>
-                <a href="{{ route('recipes.index') }}" class="text-gray-300 hover:text-white transition">RECIPES</a>
-                <a href="{{ route('tips.index') }}" class="text-gray-300 hover:text-white transition">COOKING TIPS</a>
-                <a href="#about" class="text-gray-300 hover:text-white transition">ABOUT US</a>
+                <a href="/" class="text-gray-300 hover:text-orange-400 transition">HOME</a>
+                <a href="{{ route('recipes.index') }}" class="text-gray-300 hover:text-orange-400 transition">RECIPES</a>
+                <a href="{{ route('tips.index') }}" class="text-gray-300 hover:text-orange-400 transition">COOKING TIPS</a>
+                <a href="#about" class="text-gray-300 hover:text-orange-400 transition">ABOUT US</a>
             </nav>
 
             <!-- Social Icons -->
             <div class="flex items-center gap-5 text-gray-300">
-                <a href="https://github.com/beacon" target="_blank" class="hover:text-white transition">
+                <a href="https://github.com/beacon" target="_blank" class="hover:text-orange-400 transition">
                     <i class="fa-brands fa-github text-xl"></i>
                 </a>
 
-                <a href="https://linkedin.com/in/olubukolaadebiyi" target="_blank" class="hover:text-white transition">
+                <a href="https://linkedin.com/in/olubukolaadebiyi" target="_blank" class="hover:text-orange-400 transition">
                     <i class="fa-brands fa-linkedin text-xl"></i>
                 </a>
             </div>

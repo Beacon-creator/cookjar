@@ -21,6 +21,7 @@ class RecipeSeeder extends Seeder
  
     public function run(): void
     {
+    
     $authors = Author::create([
         'name' => 'Chef Beacon',
         'bio'  => 'Professional home chef and food blogger.',
