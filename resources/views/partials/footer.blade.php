@@ -15,7 +15,7 @@
             <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium">
                 <a href="/" class="text-gray-300 hover:text-orange-400 transition">HOME</a>
                 <a href="{{ route('recipes.index') }}" class="text-gray-300 hover:text-orange-400 transition">RECIPES</a>
-                <a href="{{ route('tips.index') }}" class="text-gray-300 hover:text-orange-400 transition">COOKING TIPS</a>
+                <a href="{{ route('tips') }}" class="text-gray-300 hover:text-orange-400 transition">COOKING TIPS</a>
                 <a href="#about" class="text-gray-300 hover:text-orange-400 transition">ABOUT US</a>
             </nav>
 
