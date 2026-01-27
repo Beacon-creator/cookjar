@@ -21,3 +21,17 @@
 .nav-link.active {
     @apply text-orange-500 font-semibold;
 }
+
+@layer components {
+  .card {
+    @apply bg-surface-light border border-border-subtle rounded-3xl p-card;
+  }
+
+  .section {
+    @apply py-section px-gutter;
+  }
+
+  .btn-primary {
+    @apply bg-brand-primary text-text-inverted px-5 py-2 rounded-full font-semibold hover:opacity-90;
+  }
+}

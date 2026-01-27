@@ -30,7 +30,7 @@
 
         <div class="space-y-3">
             <div class="text-4xl">🔪</div>
-            <h3 class="font-semibold text-lg">Quality Tools</h3>
+            <h3 class="font-semibold text-lg text-orange-500">Quality Tools</h3>
             <p class="text-gray-600 text-sm">
                 Invest in reliable knives and cookware — they make cooking safer
                 and more enjoyable.
@@ -39,7 +39,7 @@
 
         <div class="space-y-3">
             <div class="text-4xl">🍳</div>
-            <h3 class="font-semibold text-lg">Essential Utensils</h3>
+            <h3 class="font-semibold text-lg text-orange-500">Essential Utensils</h3>
             <p class="text-gray-600 text-sm">
                 Keep your kitchen stocked with the basics to work efficiently.
             </p>
@@ -47,7 +47,7 @@
 
         <div class="space-y-3">
             <div class="text-4xl">⚖️</div>
-            <h3 class="font-semibold text-lg">Measuring Accuracy</h3>
+            <h3 class="font-semibold text-lg text-orange-500">Measuring Accuracy</h3>
             <p class="text-gray-600 text-sm">
                 Precision matters — especially in baking and balanced seasoning.
             </p>
@@ -61,12 +61,13 @@
  SECTION 2: NEWEST RECIPES
  (reuse existing partial)
 ========================= -->
-@include('partials.featured-recipes')
+@include('partials.featured-recipes', ['title' => 'NEWEST RECIPES'])
 
 
 <!-- =========================
  SECTION 3: MASTERING THE BASICS
 ========================= -->
+
 <section class="max-w-6xl mx-auto px-6 py-20">
 
     <h2 class="text-3xl font-bold mb-10">
@@ -125,7 +126,7 @@
         ] as [$title, $text])
 
             <div class="relative h-64 rounded-2xl overflow-hidden">
-                <img src="/images/tips-bg.jpg"
+                <img src="/images/tips-bg.png"
                      class="absolute inset-0 w-full h-full object-cover">
 
                 <div class="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end">
@@ -169,7 +170,7 @@
         ] as [$title, $text])
 
             <div class="relative h-64 rounded-2xl overflow-hidden">
-                <img src="/images/tips-bg.jpg"
+                <img src="/images/tricks-bg.png"
                      class="absolute inset-0 w-full h-full object-cover">
 
                 <div class="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end">

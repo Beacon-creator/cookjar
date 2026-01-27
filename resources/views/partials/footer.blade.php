@@ -1,9 +1,10 @@
-<footer class="bg-black w-full mt-6 rounded-3xl">
+<footer class=" w-full mt-3 bg-black text-gray-300 rounded-3xl">
     <!-- Content wrapper -->
-    <div class="max-w-7xl mx-auto px-6 py-3">
+    <div class="max-w-7xl mx-auto px-4 py-3">
 
         <!-- Top Row -->
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex flex-col md:flex-row md:px-4 py-2
+         items-center justify-between gap-8">
 
             <!-- Logo -->
             <div class="flex items-center gap-2 text-white text-xl font-bold">

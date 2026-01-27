@@ -9,45 +9,48 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-[#FDFDFC] text-[#1b1b18] min-h-screen flex flex-col">
+<body class="bg-[#FDFDFC] min-h-screen">
 
-    {{-- BLOG HEADER --}}
-    @include('partials.header')
+    <!-- HEADER (ISOLATED) -->
+    <header>
+        @include('partials.header')
+    </header>
 
-    {{-- MAIN CONTENT --}}
-    <main class="grow max-w-7xl mx-auto px-3 py-8">
-        @yield('content')
-        {{-- @include('partials.featured-recipes')
-        @include('partials.subscribe') --}}
-    </main>
+    <!-- PAGE CONTENT WRAPPER -->
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <main>
+            @yield('content')
+        </main>
+    </div>
 
-        {{-- MOBILE MENU SCRIPT --}}
+    <!-- MOBILE MENU SCRIPT -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.getElementById('menuBtn');
             const mobileMenu = document.getElementById('mobileMenu');
+            const closeBtn = document.getElementById('closeMenu');
 
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
+            menuBtn?.addEventListener('click', () => {
+                mobileMenu?.classList.remove('hidden');
+            });
+
+            closeBtn?.addEventListener('click', () => {
+                mobileMenu?.classList.add('hidden');
+            });
         });
     </script>
 
-    {{-- BLOG FOOTER --}}
-    @include('partials.footer')
+        <!-- FOOTER (ISOLATED) -->
+    <footer>
+        @include('partials.footer')
+    </footer>
 
 </body>
 </html>
-
-
-
-

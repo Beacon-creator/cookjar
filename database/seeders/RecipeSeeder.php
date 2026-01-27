@@ -28,23 +28,45 @@ class RecipeSeeder extends Seeder
         'image'=> 'author.jpeg',
     ]);
 
-    $recipe = Recipe::create([
+$recipes = [
+    [
         'title' => 'Lemon Garlic Roasted Chicken',
-        'description' => 'Picture succulent chicken infused with the bright notes of lemon and the aromatic richness of garlic. It is a symphony of flavors that will have your taste buds dancing. Join us as we delve into the art of roasting and uncover the secrets behind creating a masterpiece that is not just a meal but a celebration of culinary craftsmanship.
-            As you preheat your oven, envision the kitchen filling with the tantalizing aroma of herbs and citrus, 
-            setting the stage for a delightful meal that transcends the ordinary. 
-            The anticipation builds as the chicken roasts to golden perfection, promising a 
-            dining experience that marries simplicity with sophistication. Whether you\'re a 
-            seasoned chef or a kitchen novice, this recipe invites you to become a culinary artist, 
-            creating a masterpiece that will leave a lasting impression on your guests and loved ones.',
-        'body' => 'This recipe is a perfect blend of citrusy and garlicky flavors, 
-            creating a dish that is both aromatic and satisfying.',
+        'description' => 'Succulent chicken infused with lemon and garlic.',
+        'body' => 'A classic roast recipe.',
         'more_info' => '1 Hour • Hard Prep • 4 Serves',
         'image' => 'lemon-chicken.png',
         'is_featured' => true,
-        'author_id' => $authors->id,       
-        'slug' => Str::slug('lemon-garlic-roasted-chicken'),
+        'slug' => 'lemon-garlic-roasted-chicken',
+    ],
+    [
+        'title' => 'Creamy Mushroom Pasta',
+        'description' => 'Rich, creamy pasta with sautéed mushrooms.',
+        'body' => 'Comfort food at its finest.',
+        'more_info' => '30 Min • Easy • 2 Serves',
+        'image' => 'mushroom-pasta.png',
+        'is_featured' => true,
+        'slug' => 'creamy-mushroom-pasta',
+    ],
+    [
+        'title' => 'Grilled Honey Salmon',
+        'description' => 'Perfectly grilled salmon with honey glaze.',
+        'body' => 'Healthy and flavorful.',
+        'more_info' => '25 Min • Medium • 3 Serves',
+        'image' => 'honey-salmon.png',
+        'is_featured' => true,
+        'slug' => 'grilled-honey-salmon',
+    ],
+];
+
+foreach ($recipes as $data) {
+    Recipe::create([
+        ...$data,
+        'author_id' => $authors->id,
     ]);
+}
+    $recipe = Recipe::where('slug', 'lemon-garlic-roasted-chicken')->first();
+
+    
 
     Ingredient::insert([
         ['recipe_id' => $recipe->id, 'name' => 'Whole chicken', 'quantity' => '1'],
