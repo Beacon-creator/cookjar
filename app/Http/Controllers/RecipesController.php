@@ -34,6 +34,9 @@ class RecipesController extends Controller
         ->take(6)
         ->get();
 
-        return view('pages.recipes.show', compact('recipe', 'featuredRecipes'));
-    }
+        return view('pages.recipes.show', 
+        ['recipe' => $recipe, 'featuredRecipes' => $featuredRecipes]
+        // compact('recipe', 'featuredRecipes'));
+    );
+    }   
 }

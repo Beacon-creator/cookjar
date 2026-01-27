@@ -4,7 +4,7 @@
 
         <!-- TOP BAR -->
         <div class="flex items-center justify-between
-                    bg-white border border-gray-200
+                    bg-orange-50 border border-gray-200
                     rounded-3xl
                     px-4 md:px-6 py-2">
 

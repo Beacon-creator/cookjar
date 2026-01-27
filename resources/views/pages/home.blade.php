@@ -154,7 +154,7 @@ text-center text-white rounded-3xl"
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
     @forelse ($recipes as $recipe)
-        <div class="bg-white border rounded-xl overflow-hidden hover:shadow-lg transition">
+        <div class="bg-orange-50 border rounded-xl overflow-hidden hover:shadow-lg transition">
 
             <img src="{{ asset('images/' . $recipe->image) }}"
                  alt="{{ $recipe->title }}"

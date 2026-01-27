@@ -33,7 +33,15 @@ $recipes = [
         'title' => 'Savory Herb-Infused Chicken',
         'description' => 'Indulge in the rich and savory symphony 
             of flavors with our Savory Herb-Infused Chicken.',
-        'body' => 'A classic roast recipe.',
+        'body' => 'Picture succulent chicken infused with the bright notes of lemon and the aromatic 
+            richness of garlic. It\'s a symphony of flavors that will have your taste buds dancing. 
+            Join us as we delve into the art of roasting and uncover the secrets behind creating a masterpiece 
+            that\'s not just a meal but a celebration of culinary craftsmanship. As you preheat your oven, 
+            envision the kitchen filling with the tantalizing aroma of herbs and citrus, setting the
+            stage for a delightful meal that transcends the ordinary. The anticipation builds 
+            as the chicken roasts to golden perfection, promising a dining experience that  marries 
+            simplicity with sophistication. Whether you\'re a seasoned chef or a kitchen novice, this 
+            recipe invites you to become a culinary artist, creating a masterpiece that will leave a lasting impression on your guests and loved ones.',
         'more_info' => '40 MINS • EASY PREP • 3 Serves',
         'image' => 'lemon-chicken.png',
         'is_featured' => true,

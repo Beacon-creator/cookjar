@@ -1,5 +1,5 @@
 @if(isset($featuredRecipes) && $featuredRecipes->count())
-<section class="bg-gray-50 border border-gray-300 px-6 py-6 rounded-3xl">
+<section class="bg-orange-50 border border-gray-300 px-6 py-6 rounded-3xl">
 
     <!-- Header -->
     <div class="flex items-center justify-between mb-6">
@@ -28,7 +28,7 @@
         @foreach ($featuredRecipes as $recipe)
     <article
     class="w-1/2 shrink-0 h-95 
-           bg-white rounded-2xl shadow
+           bg-orange-50 rounded-2xl shadow
            flex flex-col overflow-hidden
            snap-start">
 
