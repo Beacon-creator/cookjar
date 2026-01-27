@@ -195,32 +195,34 @@ text-center text-white rounded-3xl"
 
 
 <!-- ABOUT US -->
-<section class=" mx-auto py-3">
-    <div class="border border-gray-300 rounded-3xl p-3">
+<section class="mx-auto py-2 max-w-7xl">
+    <div class="border border-gray-300 rounded-3xl p-2">
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
 
-            <!-- LEFT SIDE (BIGGER - 2 columns) -->
-            <div class="lg:col-span-2 grid grid-rows-2 gap-2">
+            <!-- LEFT SIDE (2 columns, equal-height rows) -->
+            <div class="lg:col-span-2 grid grid-rows-2 auto-rows-fr gap-2">
 
                 <!-- LEFT TOP (TEXT + IMAGE) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 bg-gray-100 rounded-2xl p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 
+                gap-2 bg-gray-100 rounded-2xl p-4">
 
                     <!-- Text -->
-                    <div class="flex flex-col justify-between">
+                    <div class="flex flex-col justify-between h-full">
                         <div>
-                            <span class="inline-block text-sm bg-orange-700 text-white px-3 py-1 rounded-full mb-4">
+                            <span class="inline-block text-sm
+                             bg-orange-700 text-white px-3 py-1 rounded-full mb-4">
                                 ABOUT US
                             </span>
 
                             <h2 class="text-3xl font-bold mb-3">
-                               OUR CULINARY CHRONICLE
+                                OUR CULINARY CHRONICLE
                             </h2>
 
                             <p class="text-gray-600 mb-2 text-sm">
-                               Our journey is crafted with dedication, creativity, 
-                               and an unrelenting commitment to delivering delightful culinary experiences. 
-                               Join us in savoring the essence of every dish and the stories that unfold.
+                                Our journey is crafted with dedication, creativity,
+                                and an unrelenting commitment to delivering delightful
+                                culinary experiences.
                             </p>
                         </div>
 
@@ -230,29 +232,29 @@ text-center text-white rounded-3xl"
                         </a>
                     </div>
 
-                    <!-- Image -->
-                    <div class="rounded-xl overflow-hidden">
+                    <!-- Image 1 (intentionally smaller – OK) -->
+                    <div class="rounded-xl overflow-hidden h-67 md:h-75">
                         <img src="/images/aboutus2.png"
                              alt="Cooking"
-                             class="h-full w-full object-cover">
+                             class="w-full h-full object-cover">
                     </div>
 
                 </div>
 
-                <!-- LEFT BOTTOM (FULL IMAGE) -->
-                <div class="rounded-2xl overflow-hidden">
+                <!-- LEFT BOTTOM (IMAGE 2 – NOW FULL HEIGHT) -->
+                <div class="rounded-2xl overflow-hidden h-full">
                     <img src="/images/aboutus3.png"
                          alt="Kitchen"
-                         class="h-full w-full object-cover">
+                         class="w-full h-full object-cover">
                 </div>
 
             </div>
 
-            <!-- RIGHT SIDE (SMALLER FULL IMAGE) -->
-            <div class="rounded-2xl overflow-hidden">
+            <!-- RIGHT SIDE (IMAGE 3 – unchanged, full height) -->
+            <div class="rounded-2xl overflow-hidden h-full">
                 <img src="/images/aboutus1.png"
                      alt="Food Prep"
-                     class="h-full w-full object-cover">
+                     class="w-full h-full object-cover">
             </div>
 
         </div>
@@ -260,7 +262,8 @@ text-center text-white rounded-3xl"
     </div>
 </section>
 
-
+<!-- SUBSCRIBE SECTION -->
+@include('partials.subscribe')
 
 
 {{-- scripts --}}

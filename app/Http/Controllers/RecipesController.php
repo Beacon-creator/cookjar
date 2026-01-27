@@ -28,6 +28,12 @@ class RecipesController extends Controller
             
         ]);
 
-        return view('pages.recipes.show', compact('recipe'));
+        $featuredRecipes = Recipe::where('is_featured', true)
+        ->where('id', '!=', $recipe->id)
+        ->latest()
+        ->take(6)
+        ->get();
+
+        return view('pages.recipes.show', compact('recipe', 'featuredRecipes'));
     }
 }

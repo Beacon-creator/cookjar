@@ -3,7 +3,9 @@
 
     <!-- Header -->
     <div class="flex items-center justify-between mb-6">
-        <h2 class="text-3xl font-bold">FEATURED RECIPES</h2>
+       <h2 class="text-3xl font-bold">
+    {{ $title ?? 'FEATURED RECIPES' }}
+    </h2>
 
         <!-- Scroll Buttons -->
         <div class="flex space-x-3">
