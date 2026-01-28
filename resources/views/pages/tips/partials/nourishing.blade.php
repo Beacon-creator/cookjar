@@ -6,11 +6,11 @@
 
         <!-- Scroll Buttons -->
         <div class="flex space-x-3">
-            <button onclick="scrollPalateLeft()"
+            <button id="palate-left-btn"
                 class="border-gray-300 border text-black hover:bg-white/30 rounded-full p-2">
                 <i class="fa fa-chevron-left"></i>
             </button>
-            <button onclick="scrollPalateRight()"
+            <button id="palate-right-btn"
                 class="border-gray-300 border text-black hover:bg-white/30 rounded-full p-2">
                 <i class="fa fa-chevron-right"></i>
             </button>
@@ -28,7 +28,7 @@
             ['Seasonal Veggies', 'Cook with the freshest seasonal produce.', '20 min', 'nourish2.png'],
         ] as [$title, $description, $prepTime, $img])
 
-        <div class="min-w-[calc((100%/3)-1rem)] h-96 rounded-3xl overflow-hidden relative shrink-0 snap-start">
+        <div class="w-full sm:w-1/2 md:w-1/3 h-96 rounded-3xl overflow-hidden relative shrink-0 snap-start">
 
             <!-- Background Image -->
             <img src="/images/{{ $img }}" alt="{{ $title }}" class="absolute inset-0 w-full h-full object-cover">
@@ -59,21 +59,28 @@
 
 <!-- Scroll Script -->
 <script>
-    const palateScroll = document.getElementById('palateScroll');
+    document.addEventListener('DOMContentLoaded', () => {
+        const palateScroll = document.getElementById('palateScroll');
+        const leftBtn = document.getElementById('palate-left-btn');
+        const rightBtn = document.getElementById('palate-right-btn');
 
-    function getPalateScrollAmount() {
-        const card = palateScroll.querySelector('div'); // first card
-        const style = window.getComputedStyle(palateScroll);
-        const gap = parseInt(style.gap) || 0;
-        // Scroll 3 cards at a time
-        return (card.offsetWidth + gap) * 3;
-    }
+        function getPalateScrollAmount() {
+            const card = palateScroll.querySelector('div'); // first card
+            const style = window.getComputedStyle(palateScroll);
+            const gap = parseInt(style.gap) || 0;
+            // Scroll 3 cards at a time on large screens, adjust for smaller screens
+            const screenWidth = window.innerWidth;
+            if (screenWidth >= 768) return (card.offsetWidth + gap) * 3; // md+
+            if (screenWidth >= 640) return (card.offsetWidth + gap) * 2; // sm
+            return card.offsetWidth + gap; // mobile
+        }
 
-    function scrollPalateLeft() {
-        palateScroll.scrollBy({ left: -getPalateScrollAmount(), behavior: 'smooth' });
-    }
+        leftBtn.addEventListener('click', () => {
+            palateScroll.scrollBy({ left: -getPalateScrollAmount(), behavior: 'smooth' });
+        });
 
-    function scrollPalateRight() {
-        palateScroll.scrollBy({ left: getPalateScrollAmount(), behavior: 'smooth' });
-    }
+        rightBtn.addEventListener('click', () => {
+            palateScroll.scrollBy({ left: getPalateScrollAmount(), behavior: 'smooth' });
+        });
+    });
 </script>

@@ -48,9 +48,12 @@
     </script>
 
         <!-- FOOTER (ISOLATED) -->
-    <footer>
+   <footer class="py-6">
+    <div class="max-w-7xl mx-auto px-4">
         @include('partials.footer')
+    </div>
     </footer>
+
 
 </body>
 </html>

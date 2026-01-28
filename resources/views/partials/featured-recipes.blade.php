@@ -9,11 +9,11 @@
 
         <!-- Scroll Buttons -->
         <div class="flex space-x-3">
-            <button onclick="scrollLeft()" class="border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-200">
+            <button id="scroll-left-btn" class="border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-200">
                 <i class="fa fa-chevron-left"></i>
             </button>
 
-            <button onclick="scrollRight()" class="border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-200">
+            <button id="scroll-right-btn" class="border border-gray-300 rounded-full px-3 py-1 hover:bg-gray-200">
                 <i class="fa fa-chevron-right"></i>
             </button>
         </div>
@@ -21,9 +21,8 @@
 
     <!-- Scroll Container -->
     <div id="recipeScroll" class="flex gap-3 overflow-x-auto scroll-smooth pb-4 snap-x scrollbar-hide">
-
         @foreach ($featuredRecipes as $recipe)
-        <article class="w-1/2 shrink-0 h-95 bg-orange-50 rounded-2xl shadow flex flex-col overflow-hidden snap-start">
+        <article class="w-full sm:w-1/2 md:w-1/3 shrink-0 h-95 bg-orange-50 rounded-2xl shadow flex flex-col overflow-hidden snap-start">
             <img src="{{ asset('images/' . $recipe->image) }}" alt="{{ $recipe->title }}" class="h-55 w-full object-cover">
             <div class="p-4 flex flex-col flex-1">
                 <div class="flex-1">
@@ -39,13 +38,14 @@
             </div>
         </article>
         @endforeach
-
     </div>
 
-    <!-- Scroll Scripts -->
+    <!-- Scroll Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const scrollContainer = document.getElementById('recipeScroll');
+            const leftBtn = document.getElementById('scroll-left-btn');
+            const rightBtn = document.getElementById('scroll-right-btn');
 
             function getScrollAmount() {
                 const card = scrollContainer.querySelector('article');
@@ -55,13 +55,13 @@
                 return card.offsetWidth + gap;
             }
 
-            window.scrollRight = () => {
-                scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-            };
-
-            window.scrollLeft = () => {
+            leftBtn.addEventListener('click', () => {
                 scrollContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-            };
+            });
+
+            rightBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            });
         });
     </script>
 
