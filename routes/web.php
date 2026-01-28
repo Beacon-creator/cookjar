@@ -25,3 +25,5 @@ Route::get('#subscribe', function () {
     return 'Subscribe page';
 })->name('subscribe');
 
+Route::get('/health', fn () => 'OK');
+
