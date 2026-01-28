@@ -17,7 +17,7 @@
                 <a href="/" class="text-gray-300 hover:text-orange-400 transition">HOME</a>
                 <a href="{{ route('recipes.index') }}" class="text-gray-300 hover:text-orange-400 transition">RECIPES</a>
                 <a href="{{ route('tips') }}" class="text-gray-300 hover:text-orange-400 transition">COOKING TIPS</a>
-                <a href="#about" class="text-gray-300 hover:text-orange-400 transition">ABOUT US</a>
+                <a href="{{ route('about')}}" class="text-gray-300 hover:text-orange-400 transition">ABOUT US</a>
             </nav>
 
             <!-- Social Icons -->
