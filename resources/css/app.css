@@ -1,37 +1,40 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* Blade + JS scanning (Vite handles this automatically, but fine to keep) */
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
-
+/* -------------------------
+   Navigation
+-------------------------- */
 .nav-link {
-    @apply text-gray-700 font-medium tracking-wide transition-colors duration-200;
+  @apply text-gray-700 font-medium tracking-wide transition-colors duration-200;
 }
 
 .nav-link:hover {
-    @apply text-orange-500;
+  @apply text-orange-500;
 }
 
 .nav-link.active {
-    @apply text-orange-500 font-semibold;
+  @apply font-semibold text-orange-500;
 }
 
+/* -------------------------
+   Reusable Components
+-------------------------- */
 @layer components {
   .card {
-    @apply bg-surface-light border border-border-subtle rounded-3xl p-card;
+    @apply bg-white border border-gray-200 rounded-3xl p-6;
   }
 
   .section {
-    @apply py-section px-gutter;
+    @apply py-24 px-5;
   }
 
   .btn-primary {
-    @apply bg-brand-primary text-text-inverted px-5 py-2 rounded-full font-semibold hover:opacity-90;
+    @apply bg-orange-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90;
   }
 }

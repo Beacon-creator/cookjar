@@ -23,9 +23,9 @@ class RecipeSeeder extends Seeder
     {
     
     $authors = Author::create([
-        'name' => 'Chef Beacon',
+        'name' => 'Chef',
         'bio'  => 'Professional home chef and food blogger.',
-        'image'=> 'author.jpeg',
+        'image'=> 'author.png',
     ]);
 
 $recipes = [

@@ -42,4 +42,20 @@
         </p>
 
     </div>
+
+
+    <script>
+function toggleDesktopSearch() {
+    const input = document.getElementById('desktopSearch');
+    input.classList.toggle('w-48');
+    input.classList.toggle('opacity-100');
+}
+
+function toggleMobileSearch() {
+    const input = document.getElementById('mobileSearch');
+    input.classList.toggle('w-full');
+    input.classList.toggle('opacity-100');
+}
+</script>
+
 </footer>

@@ -3,6 +3,7 @@ export default {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
+    "./resources/**/*.vue",
   ],
 
   theme: {
@@ -11,49 +12,48 @@ export default {
         brand: {
           primary: "#9FDC26",   // green
           secondary: "#F29C33", // orange
-          accent: "#EE6352",    // yellow
+          accent: "#EE6352",    // red/yellow
           other: "#C4E5FC",     // blue
         },
 
         surface: {
           light: "#F0EBE1", // off-white
           muted: "#f9fafb", // very light gray
-          dark: "#262522", // dark gray : black
+          dark: "#262522",  // near black
         },
 
         text: {
-          primary: "#FFFBF2", // off-white
-          muted: "#6b7280", // gray
+          primary: "#FFFBF2",  // off-white
+          muted: "#6b7280",    // gray
           inverted: "#ffffff", // white
         },
 
         border: {
-          subtle: "#F0EBE1", // off-white
+          subtle: "#F0EBE1",
         },
       },
 
-     fontSize: {
-    hero: ['3.5rem', { lineHeight: '1.1' }],
-    section: ['2.25rem', { lineHeight: '1.2' }],
-    cardTitle: ['1.25rem', { lineHeight: '1.4' }],
-    body: ['1rem', { lineHeight: '1.7' }],
-    small: ['0.875rem', { lineHeight: '1.6' }],
-  },
+      fontSize: {
+        hero: ['3.5rem', { lineHeight: '1.1' }],
+        section: ['2.25rem', { lineHeight: '1.2' }],
+        cardTitle: ['1.25rem', { lineHeight: '1.4' }],
+        body: ['1rem', { lineHeight: '1.7' }],
+        small: ['0.875rem', { lineHeight: '1.6' }],
+      },
 
-  borderRadius: {
-    xl: '1rem',
-    '2xl': '1.25rem',
-    '3xl': '1.75rem',
-    },
+      borderRadius: {
+        xl: '1rem',
+        '2xl': '1.25rem',
+        '3xl': '1.75rem',
+      },
 
-    spacing: {
+      spacing: {
         section: '6rem',
         card: '1.5rem',
         gutter: '1.25rem',
-        wid: 'max-w-7xl',
+      },
     },
   },
 
   plugins: [],
-}
 }

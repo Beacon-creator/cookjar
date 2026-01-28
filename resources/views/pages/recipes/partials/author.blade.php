@@ -1,8 +1,8 @@
 @if ($recipe->author)
 <hr/>
 <div class="flex items-center gap-6">
-    <img src="/images/{{ $recipe->author->image }}"
-         class="w-20 h-20 rounded-full object-cover">
+<img src="{{ asset('images/' . ($recipe->author->image ?? 'default-author.png')) }}"
+     class="w-20 h-20 rounded-full object-cover">
 
     <div>
         <h4 class="font-semibold">{{ $recipe->author->name }}</h4>
