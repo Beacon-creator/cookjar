@@ -79,7 +79,7 @@
     <div id="mobileMenu"
          class="fixed inset-4 hidden flex-col
                 bg-neutral-900 text-white
-                rounded-3xl p-6">
+                rounded-3xl p-6 h-120">
 
         {{-- HEADER --}}
         <div class="flex justify-between items-center mb-10">
@@ -110,7 +110,12 @@
 
                 <button onclick="toggleMobileSearch()"
                         class="bg-neutral-800 rounded-full p-2">
-                    🔍
+                      <svg class="w-5 h-5 text-white"
+                             fill="none" stroke="currentColor" stroke-width="2"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M21 21l-4.35-4.35m1.6-5.15a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
                 </button>
 
                 <input id="mobileSearch"
