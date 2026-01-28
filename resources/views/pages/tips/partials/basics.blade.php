@@ -1,4 +1,4 @@
-<section class="mb-6">
+<section class="mb-6 py-6">
     <h2 class="text-3xl font-bold mb-6">
         MASTERING THE BASICS
     </h2>
@@ -14,11 +14,11 @@
             ['Recipe Modification', 'Adapt dishes to your taste.', 'recipe-modification.png'],
         ] as [$title, $desc, $img])
 
-        <div class="bg-white rounded-2xl  shadow-sm flex flex-col">
+        <div class=" rounded-2xl  shadow-sm flex flex-col">
             <!-- IMAGE -->
             <img src="/images/{{ $img }}"
                  alt="{{ $title }}"
-                 class="h-40 w-full object-cover rounded-lg mb-4">
+                 class="h-40 w-full object-cover rounded-lg mb-3">
 
             <!-- TITLE & DESCRIPTION -->
             <h3 class="font-semibold px-3 text-lg mb-2">{{ $title }}</h3>
@@ -26,10 +26,10 @@
 
             <!-- BUTTON -->
             <a href="#"
-               class="mt-auto inline-block text-sm font-medium
-                text-orange-500 border border-orange-500 rounded-full 
-                px-4 py-2 text-center hover:bg-orange-50 transition">
-               Read More →
+               class="mt-auto inline-block m-6 text-sm font-medium
+                text-orange-500 border border-gray-200 rounded-full 
+                px-3 py-1 text-center hover:bg-orange-50 transition">
+               Read More
             </a>
         </div>
 
