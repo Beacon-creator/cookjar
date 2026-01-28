@@ -22,6 +22,10 @@
   @apply font-semibold text-orange-500;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* -------------------------
    Reusable Components
 -------------------------- */

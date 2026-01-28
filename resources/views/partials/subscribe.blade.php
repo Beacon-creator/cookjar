@@ -1,5 +1,5 @@
         <!-- SUBSCRIBE -->
-    <section class="wid mx-auto py-3">
+    <section id="subscribe" class="wid mx-auto py-3">
         <div class="bg-orange-600 rounded-3xl py-10  text-center">
 
             <!-- Label -->

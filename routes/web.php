@@ -21,11 +21,7 @@ Route::get('/tips', [CookingTipController::class, 'index'])
 Route::get('/about', [AboutController::class, 'index'])
     ->name('about');
 
-Route::get('/search', function () {
-    return 'Search page';
-})->name('search');
-
-Route::get('/subscribe', function () {
+Route::get('#subscribe', function () {
     return 'Subscribe page';
 })->name('subscribe');
 

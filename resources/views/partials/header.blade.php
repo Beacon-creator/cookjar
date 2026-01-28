@@ -122,7 +122,7 @@
                               focus:outline-none">
             </div>
 
-            <a href="{{ route('subscribe') }}"
+            <a href="#subscribe"
                class="bg-neutral-800 px-4 py-2 rounded-full text-sm">
                 SUBSCRIBE
             </a>
