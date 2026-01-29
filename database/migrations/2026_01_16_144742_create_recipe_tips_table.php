@@ -15,7 +15,7 @@ Schema::create('recipe_tips', function (Blueprint $table) {
     $table->id();
     $table->foreignId('recipe_id')->constrained()->cascadeOnDelete();
     $table->string('title');
-    $table->string('type', ['do', 'dont']);
+    $table->string('type', 10);
     $table->string('content');
     $table->timestamps();
 });
