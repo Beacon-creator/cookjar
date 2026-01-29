@@ -33,6 +33,8 @@ RUN composer install --no-dev --optimize-autoloader
 # Install JS deps & build assets
 RUN npm install && npm run build
 
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/public
+
 # Expose port
 EXPOSE 10000
 

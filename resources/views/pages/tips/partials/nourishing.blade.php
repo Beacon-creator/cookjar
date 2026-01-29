@@ -31,7 +31,7 @@
         <div class="w-full sm:w-1/2 md:w-1/3 h-96 rounded-3xl overflow-hidden relative shrink-0 snap-start">
 
             <!-- Background Image -->
-            <img src="/images/{{ $img }}" alt="{{ $title }}" class="absolute inset-0 w-full h-full object-cover">
+            <img src="{{ asset('images/' . $img) }}" alt="{{ $title }}" class="absolute inset-0 w-full h-full object-cover">
 
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end text-white">

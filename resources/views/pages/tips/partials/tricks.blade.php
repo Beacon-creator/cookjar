@@ -25,7 +25,7 @@
         <div class="relative h-96 rounded-3xl overflow-hidden shadow-lg">
 
             <!-- Background Image -->
-            <img src="/images/{{ $img }}" alt="{{ $title }}" class="absolute inset-0 w-full h-45 object-cover">
+            <img src="{{ asset('images/' . $img) }}" alt="{{ $title }}" class="absolute inset-0 w-full h-45 object-cover">
 
             <!-- Overlay -->
             <div class="absolute inset-0 p-6 flex flex-col justify-end text-black">
