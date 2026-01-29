@@ -12,7 +12,7 @@
     @include('pages.recipes.partials.hero')
 
     {{-- IMAGE --}}
-    <img src="/images/{{ $recipe->image }}"
+    <img src="{{ asset('images/' . $recipe->image) }}"
          class="w-full h-125 object-cover rounded-2xl my-5">
 
     {{-- MAIN GRID --}}

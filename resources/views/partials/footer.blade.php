@@ -8,7 +8,7 @@
 
             <!-- Logo -->
             <div class="flex items-center gap-2 text-white text-xl font-bold">
-                <img src="/images/cookjarlg.svg" alt="CookJar" class="h-8 w-8">
+                <img src="{{ asset('images/cookjarlg.svg') }}" alt="CookJar" class="h-8 w-8">
                 CookJar
             </div>
 

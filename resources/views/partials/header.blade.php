@@ -9,7 +9,7 @@
             {{-- LOGO --}}
             <a href="{{ route('home') }}"
                class="flex items-center gap-2 text-xl font-bold text-gray-900">
-                <img src="/images/cookjarlogo.svg" class="h-8 w-8" alt="CookJar">
+                <img src="{{ asset('images/cookjarlogo.svg') }}" class="h-8 w-8" alt="CookJar">
                 CookJar
             </a>
 
@@ -84,7 +84,7 @@
         {{-- HEADER --}}
         <div class="flex justify-between items-center mb-10">
             <div class="flex items-center gap-2 text-xl font-bold">
-                <img src="/images/cookjarlg.svg" class="h-8 w-8">
+                <img src="{{ asset('images/cookjarlg.svg') }}" class="h-8 w-8">
                 CookJar
             </div>
 

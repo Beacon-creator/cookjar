@@ -234,7 +234,7 @@ text-center text-white rounded-3xl"
 
                     <!-- Image 1 (intentionally smaller – OK) -->
                     <div class="rounded-xl overflow-hidden h-67 md:h-75">
-                        <img src="/images/aboutus2.png"
+                        <img src="{{ asset('images/aboutus2.png') }}"
                              alt="Cooking"
                              class="w-full h-full object-cover">
                     </div>
@@ -243,7 +243,7 @@ text-center text-white rounded-3xl"
 
                 <!-- LEFT BOTTOM (IMAGE 2 – NOW FULL HEIGHT) -->
                 <div class="rounded-2xl overflow-hidden h-full">
-                    <img src="/images/aboutus3.png"
+                    <img src="{{ asset('images/aboutus3.png') }}"
                          alt="Kitchen"
                          class="w-full h-full object-cover">
                 </div>
@@ -252,7 +252,7 @@ text-center text-white rounded-3xl"
 
             <!-- RIGHT SIDE (IMAGE 3 – unchanged, full height) -->
             <div class="rounded-2xl overflow-hidden h-full">
-                <img src="/images/aboutus1.png"
+                <img src="{{ asset('images/aboutus1.png') }}"
                      alt="Food Prep"
                      class="w-full h-full object-cover">
             </div>

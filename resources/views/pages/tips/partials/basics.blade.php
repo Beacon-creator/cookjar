@@ -16,7 +16,7 @@
 
         <div class=" rounded-2xl  shadow-sm flex flex-col">
             <!-- IMAGE -->
-            <img src="/images/{{ $img }}"
+            <img src="{{ asset('images/' . $img) }}"
                  alt="{{ $title }}"
                  class="h-40 w-full object-cover rounded-lg mb-3">
 

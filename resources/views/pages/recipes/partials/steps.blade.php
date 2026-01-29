@@ -31,7 +31,7 @@
                 </p>
 
                 @if ($step->image)
-                    <img src="/images/{{ $step->image }}"
+                    <img src="{{ asset('images/' . $step->image) }}" alt="{{ $step->title }}"
                          class="rounded-xl w-full max-w-md">
                 @endif
             </div>

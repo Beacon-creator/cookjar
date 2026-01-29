@@ -11,7 +11,7 @@
             <div class="border rounded-lg overflow-hidden hover:shadow flex flex-col">
                
                 <!-- Recipe Image -->
-                <img src="/images/{{ $recipe->image }}"
+                <img src="{{ asset('images/' . $recipe->image) }}"
                      class="h-48 w-full object-cover">
 
                 <!-- Content -->

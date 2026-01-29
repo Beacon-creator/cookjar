@@ -2,7 +2,7 @@
 
     <!-- Left -->
     <div>
-        <img src="/images/authorbig.png"
+        <img src="{{ asset('images/authorbig.png') }}" alt="Author"
              class="rounded-3xl mb-3">
 
        <div class="flex items-center gap-5">
