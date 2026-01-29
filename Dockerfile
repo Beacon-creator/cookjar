@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     npm \
-    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
+    && docker-php-ext-install pdo pdo_pgsql mbstring exif pcntl bcmath gd
+
+
+# install composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
