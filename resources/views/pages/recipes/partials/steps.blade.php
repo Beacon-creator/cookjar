@@ -24,6 +24,7 @@
     <div class="space-y-8">
         @foreach ($recipe->steps as $step)
             <div class="gap-3">
+                <h3 class="text-xl font-bold mb-1">Step {{ $step->step_number }}</h3>
                 <h3 class="font-semibold mb-2">{{ $step->title }}</h3>
 
                 <p class="text-gray-600 mb-3">

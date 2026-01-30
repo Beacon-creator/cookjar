@@ -1,6 +1,6 @@
 @if ($recipe->pairings->count())
-<div class="p-6">
-    <h3 class="font-semibold mb-4">PAIRING SUGGESTIONS</h3>
+<div class=" py-3">
+    <h3 class="font-semibold text-3xl mb-4">PAIRING SUGGESTIONS</h3>
 
     {{-- Intro text (SHOW ONCE) --}}
     <ol class="mb-4 text-sm text-gray-600 space-y-1">
